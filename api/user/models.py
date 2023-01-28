@@ -24,3 +24,4 @@ class CustomUser(AbstractUser):
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    isBuyer = models.BooleanField(default=True)

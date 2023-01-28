@@ -29,9 +29,9 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 env = environ.Env(
     # set casting, default value
-    DEBUG=(bool, False)
+    
 )
-
+DEBUG = env("DEBUG")
 ALLOWED_HOSTS = ['*']
 
 
@@ -169,3 +169,5 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
