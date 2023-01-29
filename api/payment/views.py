@@ -12,9 +12,9 @@ import braintree
 gateway = braintree.BraintreeGateway(
     braintree.Configuration(
         braintree.Environment.Sandbox,
-        merchant_id="3fy8tzdbr3rpgq8h",
-        public_key="rfb9rdv4yq3d92qm",
-        private_key="7e3e7363714aa1baeeb4bdeb1bc9a2eb"
+        merchant_id="6p5m8tm9hbckp9s9",
+        public_key="s39dg5fqszbypbb5",
+        private_key="0ba37c55e8b8bae3c9312e0534bdd6ccs"
     )
 )
 

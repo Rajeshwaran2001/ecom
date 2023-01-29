@@ -11,6 +11,7 @@ class Product(models.Model):
     discountPercentage = models.CharField(max_length=2, null=True, blank=True)
     stock = models.CharField(max_length=50)
     is_active = models.BooleanField(default=True, blank=True)
+    farmerId = models.CharField(max_length=5, default=5, null=True, blank=True)
     image = models.ImageField(upload_to='images/', blank=True, null=True)
     category = models.ForeignKey(
         Category, on_delete=models.SET_NULL, blank=True, null=True)
