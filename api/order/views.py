@@ -29,6 +29,7 @@ def add(request, id, token):
         transaction_id = request.POST['transaction_id']
         amount = request.POST['amount']
         products = request.POST['products']
+        created_at = request.POST['created']
 
         total_pro = len(products.split(',')[:-1])
 
@@ -40,7 +41,7 @@ def add(request, id, token):
             return JsonResponse({'error': 'User does not exist'})
 
         ordr = Order(user=user, product_names=products, total_products=total_pro,
-                     transaction_id=transaction_id, total_amount=amount)
+                     transaction_id=transaction_id, total_amount=amount, created_at=created_at)
         ordr.save()
         return JsonResponse({'success': True, 'error': False, 'msg': 'Order placed Successfully'})
 
